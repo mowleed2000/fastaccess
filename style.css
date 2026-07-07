@@ -167,14 +167,25 @@ h1, h2, h3, h4 {
 }
 
 .logo {
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    font-weight: 800;
-    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
     text-decoration: none;
-    letter-spacing: -0.5px;
-    white-space: nowrap;
     margin-right: 15px;
+}
+.logo-main {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    color: var(--text-main);
+}
+.logo-sub {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .logo .primary-text {
@@ -1760,7 +1771,8 @@ h1, h2, h3, h4 {
         top: var(--nav-height);
         left: 0;
         width: 100%;
-        background-color: rgba(255, 255, 255, 0.99);
+        background-color: var(--bg-card);
+        z-index: 1100;
         border-bottom: 1px solid var(--border-color);
         padding: 30px;
         gap: 20px;
@@ -2235,4 +2247,132 @@ h1, h2, h3, h4 {
     background-color: #121215;
     border-color: #202024;
     color: #fff;
+}
+
+/* Mobile Optimization & Custom UI overrides */
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+[data-theme="dark"] .form-group input,
+[data-theme="dark"] .form-group select,
+[data-theme="dark"] .form-group textarea {
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border-color: var(--border-color);
+}
+
+@media (max-width: 576px) {
+    .booking-form-wrapper {
+        padding: 20px 16px !important;
+    }
+}
+
+.gallery-item-wrapper img[src*="laptop-power-before"] {
+    transform: scale(1.12);
+}
+.gallery-item-wrapper img[src*="unlock"] {
+    object-fit: contain !important;
+    background-color: #000000;
+}
+
+/* Inline Product Variants Styling */
+.product-variant-group {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+}
+.variant-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+}
+.variant-select {
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 0.85rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--bg-alternate);
+    color: var(--text-main);
+    outline: none;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+.variant-select:focus {
+    border-color: var(--primary);
+}
+.color-swatches {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+}
+.color-swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 1px var(--border-color);
+    transition: all 0.2s ease;
+    position: relative;
+}
+.color-swatch:hover {
+    transform: scale(1.1);
+}
+.color-swatch.active {
+    border-color: var(--bg-card);
+    box-shadow: 0 0 0 2px var(--primary);
+    transform: scale(1.1);
+}
+.storage-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 2px;
+}
+.storage-pill {
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: var(--bg-alternate);
+    color: var(--text-main);
+    transition: all 0.2s ease;
+}
+.storage-pill:hover {
+    background-color: var(--border-color);
+}
+.storage-pill.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+.product-price-row {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-cta-btn {
+    width: 100%;
+    margin-top: 12px;
+    padding: 10px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }

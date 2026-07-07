@@ -16,7 +16,7 @@
     <!-- Sticky Navigation Bar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo">FAST ACCESS <span class="primary-text">PRINT, VAPE &amp; REPAIR</span></a>
+            <a href="index.html" class="logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE &amp; REPAIR</span></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
@@ -63,7 +63,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)), url('printing-service.png');">
+    <section class="hero" style="background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)), url('printing-service.jpg');">
         <div class="container hero-grid">
             <div class="hero-content reveal">
                 <span class="eyebrow"><i class="fa-solid fa-shop"></i> ESTABLISHED 25 YEARS &middot; HOUNSLOW HIGH STREET</span>
@@ -119,7 +119,7 @@
             <div class="services-grid-2 reveal" style="margin-bottom: 50px;">
                 <!-- Document Printing -->
                 <a href="document-printing.html" class="service-card-link">
-                    <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('printing-service.png');">
+                    <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('printing-service.jpg');">
                         <div class="card-content">
                             <span class="service-badge"><i class="fa-solid fa-fire"></i> Primary Service</span>
                             <h3>Document Printing &amp; Duplication</h3>
@@ -130,7 +130,7 @@
                 </a>
                 <!-- Internet Cafe -->
                 <a href="internet-cafe.html" class="service-card-link">
-                    <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('internet-cafe.png');">
+                    <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('internet-cafe.jpg');">
                         <div class="card-content">
                             <h3>High-Speed Internet Cafe</h3>
                             <p>Computer terminal access, high-resolution scanning, and emailing services.</p>
@@ -299,7 +299,7 @@
                 <a href="passport-photos.html" class="btn btn-primary"><i class="fa-solid fa-camera"></i> View Specifications</a>
             </div>
             <div class="details-image reveal">
-                <img src="passport-photo.png" alt="Biometric photo setup" class="in-process-img">
+                <img src="passport-photo.jpg" alt="Biometric photo setup" class="in-process-img">
             </div>
         </div>
     </section>
@@ -643,7 +643,7 @@
     </section>
 
     <!-- Final CTA -->
-    <section class="final-cta text-center reveal" style="background-image: linear-gradient(rgba(17, 17, 17, 0.75), rgba(17, 17, 17, 0.85)), url('printing-service.png');">
+    <section class="final-cta text-center reveal" style="background-image: linear-gradient(rgba(17, 17, 17, 0.75), rgba(17, 17, 17, 0.85)), url('printing-service.jpg');">
         <div class="container">
             <h2>Need Quick Printing, Internet Access or Device Repairs?</h2>
             <p>Visit us at 80 High St, Hounslow, TW3 1NH, or call us for pricing and stock information.</p>
@@ -667,7 +667,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">FAST ACCESS <span class="primary-text">PRINT, VAPE &amp; REPAIR</span></a>
+                    <a href="index.html" class="footer-logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE &amp; REPAIR</span></a>
                     <p>Serving Hounslow for 25 years. We provide professional printing (A4, A5) with lamination, government-compliant passport photos, high-speed internet cafe stations, and expert device repairs.</p>
                     <div style="margin-top: 15px;">
                         <span class="badge" style="background: rgba(255,255,255,0.05); color: #fff; border-color: rgba(255,255,255,0.1);"><i class="fa-solid fa-award"></i> Established 25 Years</span>
@@ -788,6 +788,119 @@
             navLinks.classList.toggle('active');
             hamburger.querySelector('i').classList.toggle('fa-bars');
             hamburger.querySelector('i').classList.toggle('fa-xmark');
+        });
+
+        // Inline selection and Enquire link updater for Product Catalogue
+        function selectColor(el) {
+            const parent = el.parentNode;
+            parent.querySelectorAll('.color-swatch').forEach(sw => sw.classList.remove('active'));
+            el.classList.add('active');
+            updateCardEnquiryLink(el.closest('.product-card'));
+        }
+
+        function selectStorage(el) {
+            const parent = el.parentNode;
+            parent.querySelectorAll('.storage-pill').forEach(pill => pill.classList.remove('active'));
+            el.classList.add('active');
+            updateCardEnquiryLink(el.closest('.product-card'));
+        }
+
+        function updateCardEnquiryLink(card) {
+            const btn = card.querySelector('.enquire-btn');
+            if (!btn) return;
+            
+            const productName = btn.getAttribute('data-product');
+            const flavourSelect = card.querySelector('.flavour-select');
+            const activeColor = card.querySelector('.color-swatch.active');
+            const activeStorage = card.querySelector('.storage-pill.active');
+            
+            let queryParams = new URLSearchParams();
+            queryParams.append('product', productName);
+            
+            if (flavourSelect && flavourSelect.value) {
+                queryParams.append('flavor', flavourSelect.value);
+            }
+            if (activeColor) {
+                queryParams.append('color', activeColor.getAttribute('data-color'));
+            }
+            if (activeStorage) {
+                queryParams.append('storage', activeStorage.getAttribute('data-storage'));
+            }
+            
+            btn.href = 'contact.html?' + queryParams.toString();
+        }
+
+        // Initialize selectors and handle form pre-filling on contact / index pages
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set up flavor select event listener
+            document.querySelectorAll('.flavour-select').forEach(select => {
+                select.addEventListener('change', (e) => {
+                    updateCardEnquiryLink(e.target.closest('.product-card'));
+                });
+            });
+            
+            // Auto-select first color/storage and compute initially
+            document.querySelectorAll('.product-card').forEach(card => {
+                const firstColor = card.querySelector('.color-swatch');
+                if (firstColor) firstColor.classList.add('active');
+                
+                const firstStorage = card.querySelector('.storage-pill');
+                if (firstStorage) firstStorage.classList.add('active');
+                
+                updateCardEnquiryLink(card);
+            });
+
+            // Parse URL parameters and pre-fill form fields
+            const params = new URLSearchParams(window.location.search);
+            const product = params.get('product');
+            const flavor = params.get('flavor');
+            const color = params.get('color');
+            const storage = params.get('storage');
+            
+            if (product) {
+                let detailsText = `Enquiry about: ${product}`;
+                let parts = [];
+                if (flavor) parts.push(`Flavor: ${flavor}`);
+                if (color) parts.push(`Color: ${color}`);
+                if (storage) parts.push(`Storage: ${storage}`);
+                if (parts.length > 0) {
+                    detailsText += ` (${parts.join(', ')})`;
+                }
+                
+                // Form details textarea fields
+                const contactDetails = document.getElementById('contactDetails');
+                if (contactDetails) contactDetails.value = detailsText;
+                
+                const issueDetails = document.getElementById('issueDetails');
+                if (issueDetails) issueDetails.value = detailsText;
+                
+                // Form product/service select fields
+                const contactService = document.getElementById('contactService');
+                if (contactService) {
+                    if (product.toLowerCase().includes('iphone') || product.toLowerCase().includes('samsung') || product.toLowerCase().includes('galaxy') || product.toLowerCase().includes('honor')) {
+                        contactService.value = 'phones';
+                    } else if (product.toLowerCase().includes('pouch') || product.toLowerCase().includes('vape') || product.toLowerCase().includes('elux') || product.toLowerCase().includes('juice') || product.toLowerCase().includes('salt') || product.toLowerCase().includes('mary') || product.toLowerCase().includes('pro max')) {
+                        contactService.value = 'vapes';
+                    } else {
+                        contactService.value = 'phones';
+                    }
+                }
+                
+                const serviceType = document.getElementById('serviceType');
+                if (serviceType) {
+                    if (product.toLowerCase().includes('iphone') || product.toLowerCase().includes('samsung') || product.toLowerCase().includes('galaxy') || product.toLowerCase().includes('honor')) {
+                        serviceType.value = 'phones';
+                    } else if (product.toLowerCase().includes('pouch') || product.toLowerCase().includes('vape') || product.toLowerCase().includes('elux') || product.toLowerCase().includes('juice') || product.toLowerCase().includes('salt') || product.toLowerCase().includes('mary') || product.toLowerCase().includes('pro max')) {
+                        serviceType.value = 'vapes';
+                    } else {
+                        serviceType.value = 'consultation';
+                    }
+                }
+                
+                // Form device model text input fields
+                const deviceModel = document.getElementById('deviceModel');
+                if (deviceModel) deviceModel.value = product;
+            }
         });
 
         // Mobile dropdown toggle
