@@ -17,8 +17,8 @@
     --primary-hover: var(--magenta-deep);
     --primary-glow: rgba(230, 21, 123, 0.12);
     --shadow: 0 10px 30px rgba(20, 20, 20, 0.04);
-    --font-sans: 'Libre Franklin', sans-serif;
-    --font-heading: 'Fraunces', serif;
+    --font-sans: 'Inter', sans-serif;
+    --font-heading: 'Inter', sans-serif;
     --nav-height: 80px;
 }
 
@@ -992,15 +992,7 @@ h1, h2, h3, h4 {
     font-weight: 600;
 }
 
-/* Screenshot containment for specific pages */
-.gallery-item-wrapper img[src*="laptop-data-before"],
-.gallery-item-wrapper img[src*="laptop-ram-before"],
-.gallery-item-wrapper img[src*="laptop-virus-before"],
-.gallery-item-wrapper img[src*="laptop-slow-before"] {
-    object-fit: contain !important;
-    background-color: #0f172a !important;
-    padding: 6px;
-}
+/* Screenshot containment removed to prevent pillarboxing */
 
 .service-cta {
     padding: 80px 0;
@@ -2295,12 +2287,167 @@ h1, h2, h3, h4 {
     }
 }
 
-.gallery-item-wrapper img[src*="laptop-power-before"] {
-    transform: scale(1.12);
+/* Screenshot containment removed for unlocking and power */
+
+/* Sidebar and Two-Column Catalogue Layout */
+.catalogue-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 40px;
+    align-items: flex-start;
 }
-.gallery-item-wrapper img[src*="unlock"] {
-    object-fit: contain !important;
-    background-color: #000000;
+
+.catalogue-sidebar {
+    position: sticky;
+    top: calc(var(--nav-height) + 20px);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: var(--shadow);
+}
+
+.sidebar-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+    color: var(--text-main);
+}
+
+.catalogue-sidebar .product-filter-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    width: 100%;
+}
+
+.catalogue-sidebar .filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 14px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.catalogue-sidebar .filter-btn i {
+    width: 16px;
+    font-size: 1rem;
+    text-align: center;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.catalogue-sidebar .filter-btn:hover {
+    background-color: var(--bg-alternate);
+    color: var(--primary);
+}
+
+.catalogue-sidebar .filter-btn:hover i {
+    color: var(--primary);
+}
+
+.catalogue-sidebar .filter-btn.active {
+    background-color: var(--primary-glow);
+    color: var(--primary);
+    border-color: rgba(230, 21, 123, 0.15);
+}
+
+.catalogue-sidebar .filter-btn.active i {
+    color: var(--primary);
+}
+
+/* Ensure native booking form buttons are left aligned */
+.native-booking-form button[type="submit"] {
+    align-self: flex-start;
+    width: auto;
+    min-width: 200px;
+}
+
+/* Image containment adjustments to prevent pillarboxing */
+.product-image-wrapper {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: var(--bg-alternate);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+/* For specific product images that should not be cropped, use contain with padded background */
+.product-card[data-category="Smartphones"] .product-image,
+.product-card[data-category="Tablets"] .product-image,
+.product-card[data-category="Laptops"] .product-image,
+.product-card[data-category="Vape Kits"] .product-image {
+    object-fit: contain;
+    padding: 10px;
+}
+
+/* Fix mobile responsive catalogue layout */
+@media (max-width: 992px) {
+    .catalogue-layout {
+        grid-template-columns: 220px 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalogue-layout {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    .catalogue-sidebar {
+        position: static;
+        width: 100%;
+        padding: 16px;
+    }
+    
+    .catalogue-sidebar .product-filter-bar {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .catalogue-sidebar .filter-btn {
+        width: auto;
+        display: inline-flex;
+    }
+    
+    .native-booking-form button[type="submit"] {
+        width: 100%;
+    }
 }
 
 /* Inline Product Variants Styling */

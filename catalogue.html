@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Catalogue | Fast Access | Hounslow Printing, Vape &amp; Tech Repairs</title>
+    <title>Product Catalogue | Fast Access | Hounslow Printing, Vape and Tech Repairs</title>
     <meta name="description" content="Browse our full in-store stock of smartphones, vapes, nicotine pouches, and accessories.">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Async Loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
+    <!-- FontAwesome Icons Async Loading -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +20,7 @@
     <!-- Sticky Navigation Bar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE &amp; REPAIR</span></a>
+            <a href="index.html" class="logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE AND REPAIR</span></a>
             <ul class="nav-links" id="navLinks">
                 <li><a href="index.html">Home</a></li>
                 <li class="dropdown">
@@ -33,21 +37,21 @@
                     <a href="#" class="dropdown-trigger">Laptop Repairs <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="laptop-screen.html">Screen Repair</a></li>
-                        <li><a href="power-charging.html">Power &amp; Battery</a></li>
-                        <li><a href="ram-storage.html">SSD &amp; RAM Upgrades</a></li>
+                        <li><a href="power-charging.html">Power and Battery</a></li>
+                        <li><a href="ram-storage.html">SSD and RAM Upgrades</a></li>
                         <li><a href="slow-performance.html">Performance Tuneups</a></li>
-                        <li><a href="virus-malware.html">Virus &amp; Malware Removal</a></li>
+                        <li><a href="virus-malware.html">Virus and Malware Removal</a></li>
                         <li><a href="data-recovery.html">Data Recovery</a></li>
-                        <li><a href="keyboard-ports.html">Keyboard &amp; Ports Repair</a></li>
+                        <li><a href="keyboard-ports.html">Keyboard and Ports Repair</a></li>
                         <li><a href="liquid-spill.html">Liquid Spill Recovery</a></li>
-                        <li><a href="laptop-tablet.html">Tablet &amp; General Repairs</a></li>
+                        <li><a href="laptop-tablet.html">Tablet and General Repairs</a></li>
                     </ul>
                 </li>
                 <li><a href="passport-photos.html">Passport Photos</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-trigger">Print &amp; Cafe <i class="fa-solid fa-chevron-down"></i></a>
+                    <a href="#" class="dropdown-trigger">Print and Cafe <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="document-printing.html">Printing &amp; Copying</a></li>
+                        <li><a href="document-printing.html">Printing and Copying</a></li>
                         <li><a href="internet-cafe.html">Internet Cafe Access</a></li>
                     </ul>
                 </li>
@@ -65,44 +69,45 @@
     <!-- Search Section -->
     <section class="search-section">
         <div class="container">
-            <div class="section-header text-center reveal" style="margin-bottom: 30px;">
+            <div class="section-header text-center reveal" style="margin-bottom: 20px;">
                 <span class="section-subtitle">Catalog</span>
                 <h2>In-Store Products</h2>
                 <p class="subheading">Search and browse our stock of smartphones, tablets, vapes, nicotine pouches, and accessories.</p>
                 <div class="accent-divider"></div>
             </div>
-            <div class="search-box-wrapper reveal">
-                <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                <input type="text" id="catalogueSearch" placeholder="Search products by name, brand, specifications, or flavours..." oninput="filterCatalogue()">
-            </div>
         </div>
     </section>
 
-    <!-- Category Filters -->
-    <div class="category-filters-container reveal">
-        <div class="container">
-            <div class="product-filter-bar">
-                <button class="filter-btn active" onclick="setCategory('All', this)">All Products</button>
-                <button class="filter-btn" onclick="setCategory('Counter Accessories', this)">Counter Accessories</button>
-                <button class="filter-btn" onclick="setCategory('Drinks', this)">Drinks</button>
-                <button class="filter-btn" onclick="setCategory('E-Liquids', this)">E-Liquids</button>
-                <button class="filter-btn" onclick="setCategory('Gaming', this)">Gaming</button>
-                <button class="filter-btn" onclick="setCategory('Laptops', this)">Laptops</button>
-                <button class="filter-btn" onclick="setCategory('Nicotine Pouches', this)">Nicotine Pouches</button>
-                <button class="filter-btn" onclick="setCategory('Protection & Cases', this)">Protection & Cases</button>
-                <button class="filter-btn" onclick="setCategory('Smartphones', this)">Smartphones</button>
-                <button class="filter-btn" onclick="setCategory('Tablets', this)">Tablets</button>
-                <button class="filter-btn" onclick="setCategory('Tech Accessories', this)">Tech Accessories</button>
-                <button class="filter-btn" onclick="setCategory('Vape Kits', this)">Vape Kits</button>
-                <button class="filter-btn" onclick="setCategory('Vape Refills', this)">Vape Refills</button>
-            </div>
-        </div>
-    </div>
+    <!-- Catalogue Layout Container -->
+    <section class="catalogue-showcase-section" style="padding-top: 0;">
+        <div class="container catalogue-layout reveal">
+            <!-- Left Side: Sidebar Filter Navigation -->
+            <aside class="catalogue-sidebar">
+                <h3 class="sidebar-title">Categories</h3>
+                <div class="product-filter-bar">
+                    <button class="filter-btn active" onclick="setCategory('All', this)"><i class="fa-solid fa-tags"></i> All Products</button>
+                    <button class="filter-btn" onclick="setCategory('Smartphones', this)"><i class="fa-solid fa-mobile-screen"></i> Smartphones</button>
+                    <button class="filter-btn" onclick="setCategory('Tablets', this)"><i class="fa-solid fa-tablet-screen-button"></i> Tablets</button>
+                    <button class="filter-btn" onclick="setCategory('Laptops', this)"><i class="fa-solid fa-laptop"></i> Laptops</button>
+                    <button class="filter-btn" onclick="setCategory('Vape Kits', this)"><i class="fa-solid fa-box"></i> Vape Kits</button>
+                    <button class="filter-btn" onclick="setCategory('Vape Refills', this)"><i class="fa-solid fa-circle-nodes"></i> Vape Refills</button>
+                    <button class="filter-btn" onclick="setCategory('Nicotine Pouches', this)"><i class="fa-solid fa-cubes"></i> Nicotine Pouches</button>
+                    <button class="filter-btn" onclick="setCategory('E-Liquids', this)"><i class="fa-solid fa-droplet"></i> E-Liquids</button>
+                    <button class="filter-btn" onclick="setCategory('Tech Accessories', this)"><i class="fa-solid fa-plug"></i> Tech Accessories</button>
+                    <button class="filter-btn" onclick="setCategory('Protection & Cases', this)"><i class="fa-solid fa-shield"></i> Protection and Cases</button>
+                    <button class="filter-btn" onclick="setCategory('Gaming', this)"><i class="fa-solid fa-gamepad"></i> Gaming</button>
+                    <button class="filter-btn" onclick="setCategory('Drinks', this)"><i class="fa-solid fa-bottle-water"></i> Drinks</button>
+                    <button class="filter-btn" onclick="setCategory('Counter Accessories', this)"><i class="fa-solid fa-cash-register"></i> Counter Accessories</button>
+                </div>
+            </aside>
 
-    <!-- Product Showcase Grid Section -->
-    <section class="product-showcase-section" style="padding-top: 0;">
-        <div class="container">
-            <div class="showcase-grid" id="catalogue-grid">
+            <!-- Right Side: Search and Product Grid -->
+            <div class="catalogue-main">
+                <div class="search-box-wrapper" style="margin-bottom: 30px;">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="catalogueSearch" placeholder="Search products by name, brand, specifications, or flavours..." oninput="filterCatalogue()">
+                </div>
+                <div class="showcase-grid" id="catalogue-grid">
     
             <div class="product-card reveal" data-category="Smartphones" data-title="apple iphone 11" data-specs="64gb / 128gb available, factory unlocked ios smartphone" data-flavours="" data-colors="black" data-storages="64 gb, 128 gb">
                 <div class="product-image-wrapper">
@@ -115,7 +120,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 11', ['Black'], ['64 GB', '128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -138,7 +143,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 15 Pro Max', ['White', 'Natural/Grey', 'Black'], ['256 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -161,7 +166,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 16 Pro Max', ['Natural', 'Black'], ['256 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -184,7 +189,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Samsung Galaxy S22 Ultra', ['Phantom Black'], ['256 GB', '512 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -207,7 +212,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Samsung Galaxy A54 5G', ['Awesome Violet / Light Purple'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -230,7 +235,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Huawei P30', ['Aurora / Breathing Crystal (Light Blue/Silver Gradient)'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -253,7 +258,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Samsung Galaxy A52s 5G', ['Awesome White'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -276,7 +281,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Samsung Galaxy A71', ['Prism Crush Silver / Light Blue'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -299,7 +304,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 13', ['Pink'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -322,7 +327,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 14', ['Red', 'Light Pink/Purple'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -345,7 +350,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 8', ['Black'], ['256 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -368,7 +373,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone SE', ['Red', 'White', 'Black'], ['64 GB', '128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -391,7 +396,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 16', ['Black', 'Pink', 'White'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -414,7 +419,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 15 Plus', ['Black'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -437,7 +442,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 15', ['Black', 'White/Silver'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -460,7 +465,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 14 Pro', ['Purple'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -483,7 +488,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 13 Pro Max', ['Graphite/Black'], ['128 GB'])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -506,7 +511,7 @@
                     
                     
             <button class="btn btn-secondary product-cta-btn" onclick="openOptionsModal('Apple iPhone 11 Pro', ['Gold'], [])" style="margin-top: 10px; background-color: var(--bg-alternate); border: 1px solid var(--border-color); color: var(--text-main); font-weight: 600; font-size: 0.8rem; cursor: pointer; transition: all 0.2s ease;">
-                <i class="fa-solid fa-sliders"></i> View Colors &amp; Storage
+                <i class="fa-solid fa-sliders"></i> View Colors and Storage
             </button>
             
                     
@@ -3297,6 +3302,7 @@
                 </div>
             </div>
         
+                </div>
             </div>
         </div>
     </section>
@@ -3380,7 +3386,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE &amp; REPAIR</span></a>
+                    <a href="index.html" class="footer-logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE AND REPAIR</span></a>
                     <p>Serving Hounslow for 25 years. We provide professional printing (A4, A5) with lamination, government-compliant passport photos, high-speed internet cafe stations, and expert device repairs.</p>
                     <div style="margin-top: 15px;">
                         <span class="badge" style="background: rgba(255,255,255,0.05); color: #fff; border-color: rgba(255,255,255,0.1);"><i class="fa-solid fa-award"></i> Established 25 Years</span>
@@ -3389,7 +3395,7 @@
                 <div class="footer-links">
                     <h4>Services</h4>
                     <ul class="footer-services-list">
-                        <li><a href="document-printing.html">A4/A5 Print &amp; Copy</a></li>
+                        <li><a href="document-printing.html">A4/A5 Print and Copy</a></li>
                         <li><a href="passport-photos.html">Passport Photos</a></li>
                         <li><a href="internet-cafe.html">Internet Cyber Cafe</a></li>
                         <li><a href="screen-repair.html">Phone Screen Repair</a></li> 
@@ -3627,17 +3633,39 @@
             });
         });
 
-        // Intersection Observer Scroll Animations
+        // Intersection Observer Scroll Animations with Fallbacks
         const revealElements = document.querySelectorAll('.reveal');
-        const observer = new IntersectionObserver((entries, obs) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    obs.unobserve(entry.target);
+        
+        const checkReveal = () => {
+            revealElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+                    el.classList.add('active');
                 }
             });
-        }, { threshold: 0.15 });
-        revealElements.forEach(el => observer.observe(el));
+        };
+
+        if ('IntersectionObserver' in window) {
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.02 });
+            revealElements.forEach(el => observer.observe(el));
+            
+            window.addEventListener('load', checkReveal);
+            document.addEventListener('DOMContentLoaded', checkReveal);
+        } else {
+            revealElements.forEach(el => el.classList.add('active'));
+        }
+
+        // Failsafe: force reveal all elements after a short timeout so pages never hang
+        setTimeout(() => {
+            revealElements.forEach(el => el.classList.add('active'));
+        }, 400);
 
         // Lightbox functionality
         function openLightbox(src, caption) {
