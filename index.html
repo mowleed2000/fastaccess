@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fast Access Print, Vape and Repair | Fast Access | Hounslow Printing, Vape and Tech Repairs</title>
     <meta name="description" content="Hounslow's primary printing, cyber cafe, vape shop, and expert device repair store. Serving High Street for 25 years. Document printing from £1. Genuine parts.">
-    <!-- Google Fonts Async Loading -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
-    <!-- FontAwesome Icons Async Loading -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -137,8 +135,41 @@
                             <span class="learn-more">Learn More &rarr;</span>
                         </div>
                     </div>
-                </a>
             </div>
+
+            <!-- Vape & E-Liquids Showcase Section -->
+            <h3 class="services-category-title reveal"><i class="fa-solid fa-cloud-arrow-up"></i> Premium Vapes &amp; E-Liquids</h3>
+            <div class="vapes-home-showcase reveal" style="margin-bottom: 50px; background: var(--bg-alternate); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden;">
+                <div style="display: grid; grid-template-columns: 1fr 1.2fr; min-height: 380px;">
+                    <div style="background-image: url('Fast acsess images/Geekvape Aegis Kit.jpg'); background-size: cover; background-position: center; min-height: 250px;"></div>
+                    <div style="padding: 40px; display: flex; flex-direction: column; justify-content: center;">
+                        <span class="service-badge" style="width: fit-content; margin-bottom: 12px;"><i class="fa-solid fa-star"></i> In Stock Now</span>
+                        <h4 style="font-size: 1.8rem; margin-bottom: 15px; font-weight: 800; font-family: var(--font-heading); color: var(--text-main);">Disposables, Pods &amp; E-Liquids</h4>
+                        <p style="color: var(--text-muted); margin-bottom: 25px; line-height: 1.7; font-size: 1rem;">
+                            We carry Hounslow's most complete range of premium disposable vapes, closed pod kits, coils, e-liquids, and nicotine pouches. 
+                            Stocking authentic brands: <strong>Lost Mary</strong>, <strong>Elf Bar</strong>, <strong>SKE Crystal</strong>, <strong>Hayati Pro Max</strong>, <strong>IVG</strong>, <strong>Velo</strong>, <strong>Nordic Spirit</strong>, and <strong>ZYN</strong>.
+                        </p>
+                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                            <a href="catalogue.html?category=Vape+Kits" class="btn btn-primary" style="font-size: 0.9rem; padding: 10px 20px;"><i class="fa-solid fa-basket-shopping"></i> Browse Vapes</a>
+                            <a href="contact.html?product=Vape+Stock+Enquiry" class="btn btn-outline" style="font-size: 0.9rem; padding: 10px 20px;"><i class="fa-solid fa-envelope"></i> Stock Enquiry</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <style>
+                @media (max-width: 768px) {
+                    .vapes-home-showcase > div {
+                        grid-template-columns: 1fr !important;
+                    }
+                    .vapes-home-showcase > div > div:first-child {
+                        height: 220px;
+                    }
+                    .vapes-home-showcase > div > div:last-child {
+                        padding: 24px !important;
+                    }
+                }
+            </style>
 
             <!-- Phone Repair Subsection -->
             <h3 class="services-category-title reveal"><i class="fa-solid fa-mobile-screen"></i> Phone Repair Services</h3>
@@ -790,6 +821,18 @@
             hamburger.querySelector('i').classList.toggle('fa-xmark');
         });
 
+        // Close menu immediately when clicking any link inside it
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.classList.contains('dropdown-trigger')) return;
+                navLinks.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                if (icon) {
+                    icon.className = 'fa-solid fa-bars';
+                }
+            });
+        });
+
         // Inline selection and Enquire link updater for Product Catalogue
         function selectColor(el) {
             const parent = el.parentNode;
@@ -841,6 +884,9 @@
             
             // Auto-select first color/storage and compute initially
             document.querySelectorAll('.product-card').forEach(card => {
+                const btn = card.querySelector('.enquire-btn');
+                if (!btn) return; // Skip cards without enquiry button (e.g. catalogue grid cards)
+                
                 const firstColor = card.querySelector('.color-swatch');
                 if (firstColor) firstColor.classList.add('active');
                 

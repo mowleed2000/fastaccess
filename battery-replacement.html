@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Battery Replacement | Fast Access | Hounslow Printing, Vape and Tech Repairs</title>
     <meta name="description" content="Phone draining in hours or shutting down at 20%? Get a brand new cell.">
-    <!-- Google Fonts Async Loading -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"></noscript>
-    <!-- FontAwesome Icons Async Loading -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -295,6 +293,18 @@
             hamburger.querySelector('i').classList.toggle('fa-xmark');
         });
 
+        // Close menu immediately when clicking any link inside it
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (link.classList.contains('dropdown-trigger')) return;
+                navLinks.classList.remove('active');
+                const icon = hamburger.querySelector('i');
+                if (icon) {
+                    icon.className = 'fa-solid fa-bars';
+                }
+            });
+        });
+
         // Inline selection and Enquire link updater for Product Catalogue
         function selectColor(el) {
             const parent = el.parentNode;
@@ -346,6 +356,9 @@
             
             // Auto-select first color/storage and compute initially
             document.querySelectorAll('.product-card').forEach(card => {
+                const btn = card.querySelector('.enquire-btn');
+                if (!btn) return; // Skip cards without enquiry button (e.g. catalogue grid cards)
+                
                 const firstColor = card.querySelector('.color-swatch');
                 if (firstColor) firstColor.classList.add('active');
                 

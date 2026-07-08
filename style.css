@@ -2299,6 +2299,11 @@ h1, h2, h3, h4 {
 [data-theme="dark"] .product-image-wrapper {
     background-color: #FAF9F6;
 }
+[data-theme="dark"] .product-category-badge {
+    background-color: rgba(20, 20, 20, 0.85) !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
 [data-theme="dark"] .dropdown-menu {
     background-color: #121215;
     border-color: #202024;
