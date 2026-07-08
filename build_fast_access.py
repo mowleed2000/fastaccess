@@ -3071,7 +3071,7 @@ def get_footer():
             <span class="booking-modal-close" onclick="closeBookingModal()">&times;</span>
             <div class="modal-success-icon"><i class="fa-solid fa-circle-check"></i></div>
             <h2>Enquiry Received!</h2>
-            <p>Thank you for reaching out to Fast Access. We have received your booking details and will call you shortly on your provided phone number to confirm details.</p>
+            <p>Thank you for reaching out to Fast Access. We have received your enquiry details and will call you shortly on your provided phone number to confirm details.</p>
             <button class="btn btn-primary" onclick="closeBookingModal()">Got it, thanks!</button>
         </div>
     </div>
@@ -5376,15 +5376,17 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                             <h3>High-Speed Internet Cafe</h3>
                             <p>Computer terminal access, high-resolution scanning, and emailing services.</p>
                             <span class="learn-more">Learn More &rarr;</span>
-                        </div>
                     </div>
+                </a>
             </div>
 
             <!-- Vape & E-Liquids Showcase Section -->
             <h3 class="services-category-title reveal"><i class="fa-solid fa-cloud-arrow-up"></i> Premium Vapes &amp; E-Liquids</h3>
             <div class="vapes-home-showcase reveal" style="margin-bottom: 50px; background: var(--bg-alternate); border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden;">
                 <div style="display: grid; grid-template-columns: 1fr 1.2fr; min-height: 380px;">
-                    <div style="background-image: url('Fast acsess images/Geekvape Aegis Kit.jpg'); background-size: cover; background-position: center; min-height: 250px;"></div>
+                    <a href="catalogue.html?category=Vape+Kits" style="background-color: #ffffff; display: flex; align-items: center; justify-content: center; padding: 30px; min-height: 250px; border-right: 1px solid var(--border-color); text-decoration: none;">
+                        <img src="Fast acsess images/Geekvape Aegis Kit.jpg" alt="Premium Vapes &amp; E-Liquids" style="max-width: 100%; max-height: 320px; object-fit: contain; transition: transform 0.3s ease;" class="vape-hover-img">
+                    </a>
                     <div style="padding: 40px; display: flex; flex-direction: column; justify-content: center;">
                         <span class="service-badge" style="width: fit-content; margin-bottom: 12px;"><i class="fa-solid fa-star"></i> In Stock Now</span>
                         <h4 style="font-size: 1.8rem; margin-bottom: 15px; font-weight: 800; font-family: var(--font-heading); color: var(--text-main);">Disposables, Pods &amp; E-Liquids</h4>
@@ -5392,24 +5394,44 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                             We carry Hounslow's most complete range of premium disposable vapes, closed pod kits, coils, e-liquids, and nicotine pouches. 
                             Stocking authentic brands: <strong>Lost Mary</strong>, <strong>Elf Bar</strong>, <strong>SKE Crystal</strong>, <strong>Hayati Pro Max</strong>, <strong>IVG</strong>, <strong>Velo</strong>, <strong>Nordic Spirit</strong>, and <strong>ZYN</strong>.
                         </p>
-                        <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                            <a href="catalogue.html?category=Vape+Kits" class="btn btn-primary" style="font-size: 0.9rem; padding: 10px 20px;"><i class="fa-solid fa-basket-shopping"></i> Browse Vapes</a>
-                            <a href="contact.html?product=Vape+Stock+Enquiry" class="btn btn-outline" style="font-size: 0.9rem; padding: 10px 20px;"><i class="fa-solid fa-envelope"></i> Stock Enquiry</a>
+                        <div class="vape-btns">
+                            <a href="catalogue.html?category=Vape+Kits" class="btn btn-primary"><i class="fa-solid fa-basket-shopping"></i> Browse Vapes</a>
+                            <a href="contact.html?product=Vape+Stock+Enquiry" class="btn btn-outline"><i class="fa-solid fa-envelope"></i> Stock Enquiry</a>
                         </div>
                     </div>
                 </div>
             </div>
             
             <style>
+                .vape-btns {
+                    display: flex;
+                    gap: 15px;
+                    margin-top: 15px;
+                }
+                .vape-hover-img:hover {
+                    transform: scale(1.05);
+                }
                 @media (max-width: 768px) {
                     .vapes-home-showcase > div {
                         grid-template-columns: 1fr !important;
                     }
-                    .vapes-home-showcase > div > div:first-child {
-                        height: 220px;
+                    .vapes-home-showcase > div > a {
+                        border-right: none !important;
+                        border-bottom: 1px solid var(--border-color);
+                        height: 250px;
+                        padding: 20px !important;
                     }
                     .vapes-home-showcase > div > div:last-child {
                         padding: 24px !important;
+                    }
+                    .vape-btns {
+                        flex-direction: column;
+                        width: 100%;
+                    }
+                    .vape-btns .btn {
+                        width: 100%;
+                        text-align: center;
+                        justify-content: center;
                     }
                 }
             </style>
@@ -5582,7 +5604,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
     <section class="booking-section" id="book-now">
         <div class="container booking-grid">
             <div class="booking-info reveal">
-                <span class="section-subtitle">Enquiries and Orders</span>
+                <span class="section-subtitle">Enquiries</span>
                 <h2>Request a Service or Print Submission</h2>
                 <p>Submit your document printing requests (first page is £1.00), passport photo enquiries, cyber cafe terminal bookings, or tech repair consultations. Fill in the form and we'll get back to you immediately.</p>
                 
@@ -5668,7 +5690,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                         <label for="issueDetails">Describe what you need printed or repaired</label>
                         <textarea id="issueDetails" rows="4" placeholder="e.g., I need 10 A4 pages printed black & white..."></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100"><i class="fa-solid fa-paper-plane"></i> Send Enquiry / Order Now</button>
+                    <button type="submit" class="btn btn-primary w-100"><i class="fa-solid fa-paper-plane"></i> Send Enquiry</button>
                 </form>
             </div>
         </div>
