@@ -667,23 +667,44 @@ h1, h2, h3, h4 {
 
 .radio-group {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 6px;
-    padding-left: 14px;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 8px;
+    padding-left: 0;
+}
+
+@media (max-width: 768px) {
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 .radio-label {
     display: flex;
     align-items: center;
     gap: 10px;
+    font-family: var(--font-sans);
     font-size: 0.85rem;
-    color: var(--text-muted);
+    color: var(--text-main);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 10px 16px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: all 0.2s ease;
+    flex: 1;
+}
+
+.radio-label:hover {
+    border-color: var(--primary);
+    background-color: var(--bg-alternate);
 }
 
 .radio-label input {
     cursor: pointer;
+    accent-color: var(--primary);
+    margin: 0;
 }
 
 /* Why Us Section */
@@ -859,12 +880,14 @@ h1, h2, h3, h4 {
     font-size: 3.2rem;
     color: #ffffff;
     margin-bottom: 16px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85);
 }
 
 .service-hero p {
     font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 0.95);
     margin-bottom: 28px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.85);
 }
 
 .details-grid {
@@ -952,6 +975,7 @@ h1, h2, h3, h4 {
     cursor: pointer;
     text-align: center;
     box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
 .gallery-item-wrapper img {
