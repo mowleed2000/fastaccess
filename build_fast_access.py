@@ -2938,44 +2938,44 @@ def get_header(title, description, is_home=False):
     <!-- Sticky Navigation Bar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE AND REPAIR</span></a>
+            <a href="./" class="logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE AND REPAIR</span></a>
             <ul class="nav-links" id="navLinks">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="./">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-trigger">Phone Repairs <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="screen-repair.html">Screen Repair</a></li>
-                        <li><a href="battery-replacement.html">Battery Replacement</a></li>
-                        <li><a href="charging-port.html">Charging Port Repair</a></li>
-                        <li><a href="water-damage.html">Water Damage Repair</a></li>
-                        <li><a href="phone-unlocking.html">Phone Unlocking</a></li>
+                        <li><a href="screenrepair">Screen Repair</a></li>
+                        <li><a href="batteryreplacement">Battery Replacement</a></li>
+                        <li><a href="chargingport">Charging Port Repair</a></li>
+                        <li><a href="waterdamage">Water Damage Repair</a></li>
+                        <li><a href="phoneunlocking">Phone Unlocking</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-trigger">Laptop Repairs <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="laptop-screen.html">Screen Repair</a></li>
-                        <li><a href="power-charging.html">Power and Battery</a></li>
-                        <li><a href="ram-storage.html">SSD and RAM Upgrades</a></li>
-                        <li><a href="slow-performance.html">Performance Tuneups</a></li>
-                        <li><a href="virus-malware.html">Virus and Malware Removal</a></li>
-                        <li><a href="data-recovery.html">Data Recovery</a></li>
-                        <li><a href="keyboard-ports.html">Keyboard and Ports Repair</a></li>
-                        <li><a href="liquid-spill.html">Liquid Spill Recovery</a></li>
-                        <li><a href="laptop-tablet.html">Tablet and General Repairs</a></li>
+                        <li><a href="laptopscreen">Screen Repair</a></li>
+                        <li><a href="powercharging">Power and Battery</a></li>
+                        <li><a href="ramstorage">SSD and RAM Upgrades</a></li>
+                        <li><a href="slowperformance">Performance Tuneups</a></li>
+                        <li><a href="virusmalware">Virus and Malware Removal</a></li>
+                        <li><a href="datarecovery">Data Recovery</a></li>
+                        <li><a href="keyboardports">Keyboard and Ports Repair</a></li>
+                        <li><a href="liquidspill">Liquid Spill Recovery</a></li>
+                        <li><a href="laptoptablet">Tablet and General Repairs</a></li>
                     </ul>
                 </li>
-                <li><a href="passport-photos.html">Passport Photos</a></li>
+                <li><a href="passportphotos">Passport Photos</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-trigger">Print and Cafe <i class="fa-solid fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li><a href="document-printing.html">Printing and Copying</a></li>
-                        <li><a href="internet-cafe.html">Internet Cafe Access</a></li>
+                        <li><a href="documentprinting">Printing and Copying</a></li>
+                        <li><a href="internetcafe">Internet Cafe Access</a></li>
                     </ul>
                 </li>
-                <li><a href="catalogue.html">Catalogue</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="catalogue">Catalogue</a></li>
+                <li><a href="blog">Blog</a></li>
+                <li><a href="contact">Contact</a></li>
                 <li><a href="tel:07466540111" class="btn-nav-cta"><i class="fa-solid fa-phone"></i> Call Shop</a></li>
             </ul>
             <div class="hamburger" id="hamburger">
@@ -3004,7 +3004,7 @@ def get_footer():
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="footer-logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE AND REPAIR</span></a>
+                    <a href="./" class="footer-logo"><span class="logo-main">FAST ACCESS</span><span class="logo-sub primary-text">PRINT, VAPE AND REPAIR</span></a>
                     <p>Serving Hounslow for 25 years. We provide professional printing (A4, A5) with lamination, government-compliant passport photos, high-speed internet cafe stations, and expert device repairs.</p>
                     <div style="margin-top: 15px;">
                         <span class="badge" style="background: rgba(255,255,255,0.05); color: #fff; border-color: rgba(255,255,255,0.1);"><i class="fa-solid fa-award"></i> Established 25 Years</span>
@@ -3013,14 +3013,14 @@ def get_footer():
                 <div class="footer-links">
                     <h4>Services</h4>
                     <ul class="footer-services-list">
-                        <li><a href="document-printing.html">A4/A5 Print and Copy</a></li>
-                        <li><a href="passport-photos.html">Passport Photos</a></li>
-                        <li><a href="internet-cafe.html">Internet Cyber Cafe</a></li>
-                        <li><a href="screen-repair.html">Phone Screen Repair</a></li> 
-                        <li><a href="battery-replacement.html">Phone Battery</a></li> 
-                        <li><a href="laptop-screen.html">Laptop Screen</a></li> 
-                        <li><a href="slow-performance.html">Laptop Tuneup</a></li> 
-                        <li><a href="phone-unlocking.html">Phone Unlocking</a></li>
+                        <li><a href="documentprinting">A4/A5 Print and Copy</a></li>
+                        <li><a href="passportphotos">Passport Photos</a></li>
+                        <li><a href="internetcafe">Internet Cyber Cafe</a></li>
+                        <li><a href="screenrepair">Phone Screen Repair</a></li> 
+                        <li><a href="batteryreplacement">Phone Battery</a></li> 
+                        <li><a href="laptopscreen">Laptop Screen</a></li> 
+                        <li><a href="slowperformance">Laptop Tuneup</a></li> 
+                        <li><a href="phoneunlocking">Phone Unlocking</a></li>
                     </ul>
                 </div>
                 <div class="footer-hours">
@@ -3666,17 +3666,17 @@ def build_service_page(filename, service_name, one_liner, body_copy, symptoms, i
                 <div class="related-card">
                     <h3>Screen Repair</h3>
                     <p>Smashed displays, bleeding LCDs, and unresponsive touch screens replaced.</p>
-                    <a href="{"laptop-screen.html" if is_laptop else "screen-repair.html"}" class="learn-more">Learn More &rarr;</a>
+                    <a href="{"laptopscreen" if is_laptop else "screenrepair"}" class="learn-more">Learn More &rarr;</a>
                 </div>
                 <div class="related-card">
                     <h3>Battery and Charging</h3>
                     <p>Swapping depleted cells and repairing charging ports.</p>
-                    <a href="{"power-charging.html" if is_laptop else "battery-replacement.html"}" class="learn-more">Learn More &rarr;</a>
+                    <a href="{"powercharging" if is_laptop else "batteryreplacement"}" class="learn-more">Learn More &rarr;</a>
                 </div>
                 <div class="related-card">
                     <h3>Liquid Spill Recovery</h3>
                     <p>Logic board diagnostic and chemical corrosion cleaning.</p>
-                    <a href="{"liquid-spill.html" if is_laptop else "water-damage.html"}" class="learn-more">Learn More &rarr;</a>
+                    <a href="{"liquidspill" if is_laptop else "waterdamage"}" class="learn-more">Learn More &rarr;</a>
                 </div>
             </div>
         </div>
@@ -5318,7 +5318,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                 </h1>
                 <p class="hero-tagline">Hounslow's trusted digital hub since 2001 — professional A4–A5 document printing from £1, government-compliant passport photos, high-speed internet cafe access, and expert phone and laptop repairs using 100% genuine parts.</p>
                 <div class="hero-btns">
-                    <a href="document-printing.html" class="btn btn-primary"><i class="fa-solid fa-print"></i> Document printing &mdash; from &pound;1</a>
+                    <a href="documentprinting" class="btn btn-primary"><i class="fa-solid fa-print"></i> Document printing &mdash; from &pound;1</a>
                     <a href="tel:07466540111" class="btn btn-outline"><i class="fa-solid fa-phone"></i> Call Fast Access</a>
                 </div>
                 <div class="hero-trust-strip">
@@ -5359,7 +5359,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
             <h3 class="services-category-title reveal"><i class="fa-solid fa-print"></i> Professional Print and Cafe Services</h3>
             <div class="services-grid-2 reveal" style="margin-bottom: 50px;">
                 <!-- Document Printing -->
-                <a href="document-printing.html" class="service-card-link">
+                <a href="documentprinting" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('printing-service.jpg');">
                         <div class="card-content">
                             <span class="service-badge"><i class="fa-solid fa-fire"></i> Primary Service</span>
@@ -5370,7 +5370,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                     </div>
                 </a>
                 <!-- Internet Cafe -->
-                <a href="internet-cafe.html" class="service-card-link">
+                <a href="internetcafe" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('internet-cafe.jpg');">
                         <div class="card-content">
                             <h3>High-Speed Internet Cafe</h3>
@@ -5440,7 +5440,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
             <h3 class="services-category-title reveal"><i class="fa-solid fa-mobile-screen"></i> Phone Repair Services</h3>
             <div class="services-grid reveal" style="margin-bottom: 50px;">
                 <!-- Phone Screen Repair -->
-                <a href="screen-repair.html" class="service-card-link">
+                <a href="screenrepair" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('cracked-screen.jpg');">
                         <div class="card-content">
                             <h3>Phone Screen Repair</h3>
@@ -5451,7 +5451,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                 </a>
                 
                 <!-- Phone Battery Replacement -->
-                <a href="battery-replacement.html" class="service-card-link">
+                <a href="batteryreplacement" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('battery-repair.jpg');">
                         <div class="card-content">
                             <h3>Phone Battery Replacement</h3>
@@ -5462,7 +5462,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                 </a>
                 
                 <!-- Phone Charging Port -->
-                <a href="charging-port.html" class="service-card-link">
+                <a href="chargingport" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('charging-port.jpg');">
                         <div class="card-content">
                             <h3>Charging Port Repair</h3>
@@ -5473,7 +5473,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                 </a>
                 
                 <!-- Phone Unlocking -->
-                <a href="phone-unlocking.html" class="service-card-link">
+                <a href="phoneunlocking" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('unlock-phone.jpg');">
                         <div class="card-content">
                             <h3>Phone Unlocking</h3>
@@ -5488,7 +5488,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
             <h3 class="services-category-title reveal"><i class="fa-solid fa-laptop"></i> Laptop &amp; Computer Repairs</h3>
             <div class="services-grid reveal">
                 <!-- Laptop Screen Repair -->
-                <a href="laptop-screen.html" class="service-card-link">
+                <a href="laptopscreen" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('laptop-broken-screen.jpg');">
                         <div class="card-content">
                             <h3>Laptop Screen Repair</h3>
@@ -5499,7 +5499,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                 </a>
                 
                 <!-- Performance & Upgrades -->
-                <a href="slow-performance.html" class="service-card-link">
+                <a href="slowperformance" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('laptop-slow-computer.jpg');">
                         <div class="card-content">
                             <h3>Performance Tuneups</h3>
@@ -5510,7 +5510,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                 </a>
                 
                 <!-- Liquid Spill Recovery -->
-                <a href="liquid-spill.html" class="service-card-link">
+                <a href="liquidspill" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('laptop-water-damage.jpg');">
                         <div class="card-content">
                             <h3>Liquid Spill Recovery</h3>
@@ -5521,7 +5521,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                 </a>
 
                 <!-- SSD & RAM Upgrade -->
-                <a href="ram-storage.html" class="service-card-link">
+                <a href="ramstorage" class="service-card-link">
                     <div class="service-card" style="background-image: linear-gradient(rgba(17, 17, 17, 0.45), rgba(17, 17, 17, 0.75)), url('laptop-ram-upgrade.jpg');">
                         <div class="card-content">
                             <h3>SSD and RAM Upgrades</h3>
@@ -5592,7 +5592,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                         <li><i class="fa-solid fa-circle-check"></i> <strong>Instant Turnaround:</strong> Capture, validation, and printing in under 5 minutes.</li>
                     </ul>
                 </div>
-                <a href="passport-photos.html" class="btn btn-primary"><i class="fa-solid fa-camera"></i> View Specifications</a>
+                <a href="passportphotos" class="btn btn-primary"><i class="fa-solid fa-camera"></i> View Specifications</a>
             </div>
             <div class="details-image reveal">
                 <img src="passport-photo.jpg" alt="Biometric photo setup" class="in-process-img">
@@ -5733,7 +5733,7 @@ index_content = get_header("Fast Access Print, Vape and Repair", "Hounslow's pri
                 <span class="section-subtitle">Our Store Stock</span>
                 <h2>Vapes, Tech Products and More</h2>
                 <p>We stock a massive, handpicked inventory of the latest smart devices, premium disposable vape kits, closed pod refills, nicotine pouches, and essential tech accessories. Visit us in-store at 80 High St, Hounslow to view our full stock.</p>
-                <a href="catalogue.html" class="btn btn-primary">Browse Full Catalogue &rarr;</a>
+                <a href="catalogue" class="btn btn-primary">Browse Full Catalogue &rarr;</a>
             </div>
             <div class="phone-anchors-grid reveal">
                 <!-- Representative 1: Vapes & Pods -->
@@ -5813,7 +5813,7 @@ vapes_redirect = """<!DOCTYPE html>
 </body>
 </html>"""
 
-with open(os.path.join(dest_dir, "vapes-pouches.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "vapespouches.html"), "w", encoding="utf-8") as f:
     f.write(vapes_redirect)
 print("vapes-pouches.html written (redirect).")
 
@@ -5833,7 +5833,7 @@ phones_redirect = """<!DOCTYPE html>
 </body>
 </html>"""
 
-with open(os.path.join(dest_dir, "phones-in-store.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "phonesinstore.html"), "w", encoding="utf-8") as f:
     f.write(phones_redirect)
 print("phones-in-store.html written (redirect).")
 
@@ -6134,7 +6134,7 @@ printing_content = get_header("Document Printing and Copying", "High-speed A4 an
     </section>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "document-printing.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "documentprinting.html"), "w", encoding="utf-8") as f:
     f.write(printing_content)
 print("document-printing.html written.")
 
@@ -6289,7 +6289,7 @@ passport_content = get_header("Passport Photos", "Government-compliant visa and 
     </section>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "passport-photos.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "passportphotos.html"), "w", encoding="utf-8") as f:
     f.write(passport_content)
 print("passport-photos.html written.")
 
@@ -6478,7 +6478,7 @@ cafe_content = get_header("Internet Cafe", "High-speed cyber cafe internet acces
     </section>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "internet-cafe.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "internetcafe.html"), "w", encoding="utf-8") as f:
     f.write(cafe_content)
 print("internet-cafe.html written.")
 
@@ -6503,12 +6503,12 @@ blog_content = get_header("Blog and Advice", "Read professional advice, printing
             <div class="blog-grid reveal">
                 <!-- Post 1 -->
                 <div class="blog-card">
-                    <img src="Fast acsess images/blog_printing_richmond.webp" alt="Document Printing Richmond" class="blog-card-img" loading="lazy">
+                    <img src="Fast acsess images/blog_printing_hounslow.webp" alt="Document Printing Hounslow" class="blog-card-img" loading="lazy">
                     <div class="blog-card-content">
                         <div class="blog-card-meta">July 3, 2026 | Printing and Copying</div>
-                        <h3>The Ultimate Guide to Last-Minute Document Printing in Richmond</h3>
+                        <h3>The Ultimate Guide to Last-Minute Document Printing in Hounslow</h3>
                         <p>Need urgent printing? Learn how to email your documents to fastinternetacess@gmail.com and print them instantly with zero wait times.</p>
-                        <a href="blog-printing-richmond.html" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
+                        <a href="blogprintinghounslow" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
                     </div>
                 </div>
                 <!-- Post 2 -->
@@ -6518,7 +6518,7 @@ blog_content = get_header("Blog and Advice", "Read professional advice, printing
                         <div class="blog-card-meta">July 2, 2026 | Formatting and Scaling</div>
                         <h3>How to Format Large Documents for A3 and A4 Printing</h3>
                         <p>An easy-to-follow guide explaining aspect ratios and resolution requirements when scaling documents between A4 and A3 size formats.</p>
-                        <a href="blog-formatting.html" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
+                        <a href="blogformatting" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
                     </div>
                 </div>
                 <!-- Post 3 -->
@@ -6528,7 +6528,7 @@ blog_content = get_header("Blog and Advice", "Read professional advice, printing
                         <div class="blog-card-meta">July 1, 2026 | Workstation Rentals</div>
                         <h3>Desktop on Demand: Maximizing Quick Workstations for Remote Workers</h3>
                         <p>Distraction-free high-speed internet stations and terminals for gig workers, remote employees, or tourists needing immediate PC access.</p>
-                        <a href="blog-workstations.html" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
+                        <a href="blogworkstations" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
                     </div>
                 </div>
                 <!-- Post 4 -->
@@ -6538,7 +6538,7 @@ blog_content = get_header("Blog and Advice", "Read professional advice, printing
                         <div class="blog-card-meta">June 30, 2026 | Vape Technology</div>
                         <h3>10K vs. 30K Puffs: Choosing the Right Big-Puff Vape for Your Budget</h3>
                         <p>Cost efficiency breakdown of changing vape technologies. Compare popular Dojo Blast, IVG Pro 10K, and Crown Bar 30K modular setups.</p>
-                        <a href="blog-big-puff-vapes.html" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
+                        <a href="blogbigpuffvapes" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
                     </div>
                 </div>
                 <!-- Post 5 -->
@@ -6548,7 +6548,7 @@ blog_content = get_header("Blog and Advice", "Read professional advice, printing
                         <div class="blog-card-meta">June 29, 2026 | Closed Pod Systems</div>
                         <h3>The Rise of Closed-Pod Systems: Reusable Batteries in the Market</h3>
                         <p>Environmental and long-term cost benefits of modular closed-pod setups. Featuring Vuse Ultra and Z-Land customizable pods.</p>
-                        <a href="blog-closed-pod-systems.html" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
+                        <a href="blogclosedpodsystems" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
                     </div>
                 </div>
                 <!-- Post 6 -->
@@ -6558,7 +6558,7 @@ blog_content = get_header("Blog and Advice", "Read professional advice, printing
                         <div class="blog-card-meta">June 28, 2026 | E-Liquids</div>
                         <h3>A Flavor Breakdown of the Best 10ml Nic Salts: Finding Your Vape</h3>
                         <p>Refillable pod e-liquid guide. Check out our Mix &amp; Match deal (e.g. Bar Juice 5000 priced at £2.99 each or 4 for £10.00) and profiles.</p>
-                        <a href="blog-nic-salts.html" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
+                        <a href="blognicsalts" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
                     </div>
                 </div>
                 <!-- Post 7 -->
@@ -6568,7 +6568,7 @@ blog_content = get_header("Blog and Advice", "Read professional advice, printing
                         <div class="blog-card-meta">June 27, 2026 | Nicotine Pouches</div>
                         <h3>Nicotine Pouches: Smoke-Free Guide to ZYN, VELO, and Nordic Spirit</h3>
                         <p>Transition to white spit-free pouches. Tips on selecting strength, brands (Nordic Spirit, VELO, Pablo), and flavor profiles.</p>
-                        <a href="blog-nicotine-pouches.html" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
+                        <a href="blognicotinepouches" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
                     </div>
                 </div>
                 <!-- Post 8 -->
@@ -6578,7 +6578,7 @@ blog_content = get_header("Blog and Advice", "Read professional advice, printing
                         <div class="blog-card-meta">June 26, 2026 | Smartphone Upgrades</div>
                         <h3>Premium Mobile Upgrades: Is It Time to Step Up to the iPhone 16 Pro Max?</h3>
                         <p>Write-up comparing flagships. Check out in-stock iPhone 16 Pro Max 256GB, standard iPhone 16, and Samsung S22 Ultra models.</p>
-                        <a href="blog-premium-upgrades.html" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
+                        <a href="blogpremiumupgrades" class="btn btn-outline" style="align-self: flex-start; padding: 6px 16px; font-size: 0.85rem;">Read Post &rarr;</a>
                     </div>
                 </div>
             </div>
@@ -6593,19 +6593,19 @@ print("blog.html written.")
 
 # ----------------- Write Individual Blog Posts -----------------
 
-# 1. blog-printing-richmond.html
-blog1_content = get_header("Last-Minute Document Printing", "Email documents directly to fastinternetacess@gmail.com and print them instantly in Richmond with zero wait times.") + '''
+# 1. blogprintinghounslow.html
+blog1_content = get_header("Last-Minute Document Printing", "Email documents directly to fastinternetacess@gmail.com and print them instantly in Hounslow with zero wait times.") + '''
     <article class="blog-post-container reveal">
         <header class="blog-post-header">
             <span class="section-subtitle">Printing and Copying</span>
-            <h1>The Ultimate Guide to Last-Minute Document Printing in Richmond</h1>
+            <h1>The Ultimate Guide to Last-Minute Document Printing in Hounslow</h1>
             <div class="blog-post-meta">Published July 3, 2026 by Fast Access Print Hub</div>
         </header>
         
-        <img src="Fast acsess images/blog_printing_richmond.webp" alt="Richmond Document Printing" style="width: 100%; border-radius: 8px; margin-bottom: 40px; box-shadow: var(--shadow);" loading="lazy">
+        <img src="Fast acsess images/blog_printing_hounslow.webp" alt="Hounslow Document Printing" style="width: 100%; border-radius: 8px; margin-bottom: 40px; box-shadow: var(--shadow);" loading="lazy">
         
         <div class="blog-post-content">
-            <p>Need urgent printing? Whether you\'re a remote worker, local professional, student, or traveler needing a boarding pass printed, Fast Access is Richmond\'s trusted local print shop. We ensure document printing is fast, reliable, and convenient.</p>
+            <p>Need urgent printing? Whether you\'re a remote worker, local professional, student, or traveler needing a boarding pass printed, Fast Access is Hounslow\'s trusted local print shop. We ensure document printing is fast, reliable, and convenient.</p>
             
             <h2>Print Straight From Your Inbox</h2>
             <p>To eliminate wait times, you can submit your PDFs, shipping labels, tickets, or visa documentation directly from your phone. Simply email your files to:</p>
@@ -6633,9 +6633,9 @@ blog1_content = get_header("Last-Minute Document Printing", "Email documents dir
     </article>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "blog-printing-richmond.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "blogprintinghounslow.html"), "w", encoding="utf-8") as f:
     f.write(blog1_content)
-print("blog-printing-richmond.html written.")
+print("blogprintinghounslow.html written.")
 
 
 # 2. blog-formatting.html
@@ -6673,13 +6673,13 @@ blog2_content = get_header("Formatting A3 and A4 Documents", "Aspect ratios and 
     </article>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "blog-formatting.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "blogformatting.html"), "w", encoding="utf-8") as f:
     f.write(blog2_content)
 print("blog-formatting.html written.")
 
 
 # 3. blog-workstations.html
-blog3_content = get_header("Quick Workstations for Remote Workers", "High-speed internet terminals and workspace rentals for gig workers and remote employees in Richmond.") + '''
+blog3_content = get_header("Quick Workstations for Remote Workers", "High-speed internet terminals and workspace rentals for gig workers and remote employees in Hounslow.") + '''
     <article class="blog-post-container reveal">
         <header class="blog-post-header">
             <span class="section-subtitle">Workstation Rentals</span>
@@ -6712,7 +6712,7 @@ blog3_content = get_header("Quick Workstations for Remote Workers", "High-speed 
     </article>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "blog-workstations.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "blogworkstations.html"), "w", encoding="utf-8") as f:
     f.write(blog3_content)
 print("blog-workstations.html written.")
 
@@ -6749,7 +6749,7 @@ blog4_content = get_header("10K vs 30K Puffs Vape Budget", "A cost-efficiency br
     </article>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "blog-big-puff-vapes.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "blogbigpuffvapes.html"), "w", encoding="utf-8") as f:
     f.write(blog4_content)
 print("blog-big-puff-vapes.html written.")
 
@@ -6784,7 +6784,7 @@ blog5_content = get_header("Rise of Closed Pod Systems", "Environmental and long
     </article>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "blog-closed-pod-systems.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "blogclosedpodsystems.html"), "w", encoding="utf-8") as f:
     f.write(blog5_content)
 print("blog-closed-pod-systems.html written.")
 
@@ -6823,7 +6823,7 @@ blog6_content = get_header("Best 10ml Nic Salts Flavor Breakdown", "Refillable p
     </article>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "blog-nic-salts.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "blognicsalts.html"), "w", encoding="utf-8") as f:
     f.write(blog6_content)
 print("blog-nic-salts.html written.")
 
@@ -6861,7 +6861,7 @@ blog7_content = get_header("Nicotine Pouches Smoke-Free Guide", "Learn how to se
     </article>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "blog-nicotine-pouches.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "blognicotinepouches.html"), "w", encoding="utf-8") as f:
     f.write(blog7_content)
 print("blog-nicotine-pouches.html written.")
 
@@ -6899,7 +6899,7 @@ blog8_content = get_header("Premium Mobile Phone Upgrades", "A detailed flagship
     </article>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "blog-premium-upgrades.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "blogpremiumupgrades.html"), "w", encoding="utf-8") as f:
     f.write(blog8_content)
 print("blog-premium-upgrades.html written.")
 
@@ -6907,7 +6907,7 @@ print("blog-premium-upgrades.html written.")
 # 14 service/repair page generation calls
 # 1. SCREEN REPAIR PAGE
 build_service_page(
-    filename="screen-repair.html",
+    filename="screenrepair.html",
     service_name="Phone Screen Repair",
     one_liner="Smashed display or unresponsive touch screen? We fit quality replacement panels.",
     body_copy="Smashed phone screens shouldn't mean buying a new device. We fit premium replacement displays for iPhone, Samsung Galaxy, Google Pixel, and more. Our parts restore original touch responsiveness, brightness, and color accuracy. Most repairs are completed within 1 hour.",
@@ -6928,7 +6928,7 @@ build_service_page(
 
 # 2. BATTERY REPLACEMENT PAGE
 build_service_page(
-    filename="battery-replacement.html",
+    filename="batteryreplacement.html",
     service_name="Phone Battery Replacement",
     one_liner="Phone draining in hours or shutting down at 20%? Get a brand new cell.",
     body_copy="Over time, lithium-ion phone batteries naturally degrade and lose capacity. Swapping your depleted cell with a brand new, safety-tested battery restores original usage hours and prevents sudden shutdowns. Most battery replacements take under 45 minutes.",
@@ -6949,7 +6949,7 @@ build_service_page(
 
 # 3. WATER DAMAGE PAGE
 build_service_page(
-    filename="water-damage.html",
+    filename="waterdamage.html",
     service_name="Phone Water Damage Repair",
     one_liner="Dropped in water? Don't try charging it — bring it straight to our shop.",
     body_copy="Liquid contact triggers rapid corrosion inside your phone. We open the device, extract the main circuit board, and treat it in a specialized chemical ultrasonic bath to remove moisture and minerals. We then diagnose individual components to bring the device back to life.",
@@ -6970,7 +6970,7 @@ build_service_page(
 
 # 4. CHARGING PORT PAGE
 build_service_page(
-    filename="charging-port.html",
+    filename="chargingport.html",
     service_name="Phone Charging Port Repair",
     one_liner="Loose charger cables, slow charging, or completely dead USB-C / Lightning ports.",
     body_copy="A worn-out charging port makes recharging your device frustrating or impossible. We clean packed lint from loose ports or replace the entire charging jack assembly to restore full power connection and fast charging speeds.",
@@ -6991,7 +6991,7 @@ build_service_page(
 
 # 5. PHONE UNLOCKING PAGE
 build_service_page(
-    filename="phone-unlocking.html",
+    filename="phoneunlocking.html",
     service_name="Phone Unlocking",
     one_liner="Unlock your phone from any carrier and enjoy complete network freedom.",
     body_copy="Locked handsets limit you to a single mobile provider. We perform factory-standard network unlocking so you can insert any SIM card from any carrier worldwide. Perfect for switching network rates or using local SIMs while traveling abroad.",
@@ -7012,7 +7012,7 @@ build_service_page(
 
 # 6. TABLET & GENERAL REPAIRS PAGE
 build_service_page(
-    filename="laptop-tablet.html",
+    filename="laptoptablet.html",
     service_name="Tablet and General Repairs",
     one_liner="From iPad screen swaps to logic board issues — we repair tablets and miscellaneous tech.",
     body_copy="We apply the same high-quality technical standards to tablets, iPads, MacBooks, and Windows laptops. Whether you need a smashed screen replaced, a keyboard fixed, or performance tune-ups, our workshop is fully equipped for larger devices.",
@@ -7035,7 +7035,7 @@ build_service_page(
 # ----------------- Write Laptop Sub-pages -----------------
 # 7. LAPTOP SCREEN REPAIR PAGE
 build_service_page(
-    filename="laptop-screen.html",
+    filename="laptopscreen.html",
     service_name="Laptop Screen Repair",
     one_liner="Cracked, flickering or dead laptop screen? We replace displays for all models.",
     body_copy="Smashed screens shouldn't mean replacing your entire laptop. We fit premium replacement LED panels for MacBooks, Dell, HP, Lenovo, and ASUS. Most screen replacements are completed within 1-2 hours.",
@@ -7056,7 +7056,7 @@ build_service_page(
 
 # 8. LAPTOP SLOW PC TUNEUP PAGE
 build_service_page(
-    filename="slow-performance.html",
+    filename="slowperformance.html",
     service_name="Laptop Performance Tuneup",
     one_liner="Speed up your slow laptop with professional tuning and internal dust cleanup.",
     body_copy="Over time, computers collect dust, dry out thermal paste, and accumulate registry bloat. We clean inside, apply premium thermal compound, and streamline your operating system to restore speed.",
@@ -7077,7 +7077,7 @@ build_service_page(
 
 # 9. LAPTOP VIRUS & MALWARE PAGE
 build_service_page(
-    filename="virus-malware.html",
+    filename="virusmalware.html",
     service_name="Laptop Virus and Malware Removal",
     one_liner="Complete virus warning removal, system cleanup, and security reinforcement.",
     body_copy="Pop-ups, lock screens, or sudden slowdowns are signs of malware infection. We wipe viruses, remove spyware, and install active firewalls to protect your identity and private data.",
@@ -7098,7 +7098,7 @@ build_service_page(
 
 # 10. LAPTOP DATA RECOVERY PAGE
 build_service_page(
-    filename="data-recovery.html",
+    filename="datarecovery.html",
     service_name="Laptop Data Recovery",
     one_liner="Recover lost files, precious photos, and critical documents from failed drives.",
     body_copy="If your computer won't boot or showing disk errors, do not write new files. We extract data from failed SSDs, corrupt HDDs, and formatted USBs safely.",
@@ -7119,7 +7119,7 @@ build_service_page(
 
 # 11. LAPTOP RAM & STORAGE UPGRADE PAGE
 build_service_page(
-    filename="ram-storage.html",
+    filename="ramstorage.html",
     service_name="Laptop RAM & SSD Upgrade",
     one_liner="Upgrade your drive to a superfast SSD and boost multitasking with extra RAM.",
     body_copy="Low storage warning or slow bootup? Swapping a mechanical HDD for an SSD speeds up performance by up to 10x. We duplicate your data exactly to the new drive.",
@@ -7140,7 +7140,7 @@ build_service_page(
 
 # 12. LAPTOP KEYBOARD & PORTS PAGE
 build_service_page(
-    filename="keyboard-ports.html",
+    filename="keyboardports.html",
     service_name="Laptop Keyboard and Ports Repair",
     one_liner="Sticky keys, loose USB ports, or unresponsive trackpads — repaired.",
     body_copy="Damaged keyboards or loose power connections are highly frustrating. We replace keyboard assemblies and solder fresh USB/charging ports.",
@@ -7161,7 +7161,7 @@ build_service_page(
 
 # 13. LAPTOP LIQUID SPILL RECOVERY PAGE
 build_service_page(
-    filename="liquid-spill.html",
+    filename="liquidspill.html",
     service_name="Laptop Liquid Spill Recovery",
     one_liner="Spilled liquid on your laptop? Turn it off immediately and bring it to us.",
     body_copy="Time is critical. We disassemble your laptop, dry components, decontaminate corrosion in ultrasonic baths, and solder corroded board components.",
@@ -7182,7 +7182,7 @@ build_service_page(
 
 # 14. LAPTOP POWER & BATTERY PAGE
 build_service_page(
-    filename="power-charging.html",
+    filename="powercharging.html",
     service_name="Laptop Power and Battery Repair",
     one_liner="Battery draining quickly or laptop failing to turn on? We replace cells fast.",
     body_copy="Swollen batteries are fire hazards and warp trackpads. We swap MacBook and Windows laptop batteries with premium safety-tested cells.",
@@ -7287,7 +7287,7 @@ vapes_content = get_header("Vapes and Pouches", "Premium disposable vapes and ni
     </section>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "vapes-pouches.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "vapespouches.html"), "w", encoding="utf-8") as f:
     f.write(vapes_content)
 print("vapes-pouches.html written.")
 
@@ -7352,6 +7352,6 @@ phones_content = get_header("Phones In Store", "Quality pre-owned and new handse
     </section>
 ''' + get_footer()
 
-with open(os.path.join(dest_dir, "phones-in-store.html"), "w", encoding="utf-8") as f:
+with open(os.path.join(dest_dir, "phonesinstore.html"), "w", encoding="utf-8") as f:
     f.write(phones_content)
 print("phones-in-store.html written.")
