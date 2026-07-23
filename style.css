@@ -477,18 +477,22 @@ h1, h2, h3, h4 {
 .services-category-title {
     font-family: var(--font-heading);
     font-size: 1.6rem;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
     color: var(--text-main);
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 100%;
+    clear: both;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 24px;
+    width: 100%;
+    clear: both;
 }
 
 .services-grid-3 {
@@ -507,6 +511,8 @@ h1, h2, h3, h4 {
 
 .service-card-link {
     text-decoration: none;
+    display: block;
+    width: 100%;
 }
 
 .service-card {
@@ -1841,9 +1847,9 @@ h1, h2, h3, h4 {
     .hero-grid { grid-template-columns: 1fr; text-align: center; }
     .hero-btns { justify-content: center; }
     .walk-ins-tag { justify-content: center; }
-    .services-grid { grid-template-columns: repeat(2, 1fr); }
-    .services-grid-3 { grid-template-columns: repeat(2, 1fr); }
-    .services-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 100%; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .services-grid-3 { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .services-grid-2 { grid-template-columns: repeat(2, 1fr); max-width: 100%; gap: 20px; }
     .booking-grid { grid-template-columns: 1fr; }
     .why-us-grid { grid-template-columns: 1fr; gap: 20px; }
     .phones-teaser-grid, .contact-grid-page, .details-grid { grid-template-columns: 1fr; text-align: center; }
@@ -1863,9 +1869,9 @@ h1, h2, h3, h4 {
     .footer-bottom { flex-direction: column; text-align: center; }
     .footer-services-list { grid-template-columns: 1fr; gap: 8px; justify-items: center; }
     .form-group-grid { grid-template-columns: 1fr; }
-    .services-grid { grid-template-columns: 1fr; }
-    .services-grid-3 { grid-template-columns: 1fr; }
-    .services-grid-2 { grid-template-columns: 1fr; max-width: 400px; }
+    .services-grid { grid-template-columns: 1fr; gap: 16px; }
+    .services-grid-3 { grid-template-columns: 1fr; gap: 16px; }
+    .services-grid-2 { grid-template-columns: 1fr; max-width: 100%; gap: 16px; }
 }
 
 @media (max-width: 576px) {
